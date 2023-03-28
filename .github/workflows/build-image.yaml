@@ -19,7 +19,7 @@ jobs:
           ./Containerfile
 
     - name: Push To GHCR
-      uses: ./
+      uses: redhat-actions/push-to-registry@v2
       id: push
       with:
         image: ${{ steps.build_image.outputs.image }}
@@ -29,3 +29,10 @@ jobs:
         password: ${{ github.token }}
         extra-args: |
           --disable-content-trust
+
+    - name: Print image url
+      run: echo "Image pushed to ${{ steps.push.outputs.registry-paths }}"
+    
+    - name: Echo outputs
+      run: |
+        echo "${{ toJSON(steps.push.outputs) }}"
