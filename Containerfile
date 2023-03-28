@@ -115,8 +115,8 @@ COPY --chown=$USER_UID:$USER_GID build-wine.sh /build-wine.sh
 RUN sudo chmod 777 /build-wine.sh
 
 WORKDIR /wine-builder
-RUN chown $USER_UID:$USER_GID /wine-builder
-RUN chmod 777 /wine-builder
+RUN sudo chown $USER_UID:$USER_GID /wine-builder
+RUN sudo chmod 777 /wine-builder
 
 RUN sudo apt install -y build-essential flex bison lib32z1 gcc-multilib g++-multilib
 
