@@ -2,6 +2,7 @@ name: Build Image
 on:
   push:
     paths:
+      - '.github/workflows/**'
       - 'build-wine.sh'
       - 'Containerfile'
 
