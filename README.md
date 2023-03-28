@@ -2,6 +2,14 @@
 
 This is a fairly generic wine builder. It should be able to build any wine directory.
 
+## Image
+
+To download the image just run the following command:
+
+```sh
+podman pull ghcr.io/daegalus/wine-builder
+```
+
 ## Building
 
 1. Download the wine src, either official or various forks.
