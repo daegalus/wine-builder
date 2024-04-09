@@ -11,8 +11,5 @@
       "matchBaseBranches": ["main"],
       "groupName": "All"
     }
-  ],
-  "postUpdateOptions": [
-    "gomodTidy"
   ]
 }
