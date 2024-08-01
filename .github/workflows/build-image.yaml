@@ -5,6 +5,7 @@ on:
       - '.github/workflows/**'
       - 'build-wine.sh'
       - 'Containerfile'
+  workflow_dispatch:
 
 permissions:
   packages: write
