@@ -1,4 +1,4 @@
-FROM debian:12-slim
+FROM debian:13-slim
 
 ARG USERNAME=wine-builder
 ARG USER_UID=1000
