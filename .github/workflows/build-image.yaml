@@ -20,7 +20,7 @@ jobs:
 
     - name: Buildah Action
       id: build_image
-      uses: redhat-actions/buildah-build@v2
+      uses: redhat-actions/buildah-build@v3
       with:
         image: wine-builder
         tags: latest ${{ github.sha }}
@@ -28,7 +28,7 @@ jobs:
           ./Containerfile
 
     - name: Push To GHCR
-      uses: redhat-actions/push-to-registry@v2
+      uses: redhat-actions/push-to-registry@v3
       id: push
       with:
         image: ${{ steps.build_image.outputs.image }}
